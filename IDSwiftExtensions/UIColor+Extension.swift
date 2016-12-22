@@ -1,6 +1,6 @@
-extension UIColor {
+public extension UIColor {
     //用数值初始化颜色，便于生成设计图上标明的十六进制颜色
-    convenience init(hexString: String) {
+    public convenience init(hexString: String) {
         // 处理前缀
         var hex = hexString
         if hex.hasPrefix("#") {
