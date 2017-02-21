@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIViewController {
+open extension UIViewController {
     /** Configure the navigation bar with only title */
     public func configureNavigationBar(title: String) {
         configureNavigationBar(title: title, leftImage: nil, rightAttributedString: nil)
@@ -49,10 +49,10 @@ public extension UIViewController {
         }
     }
     // MARK: - 控制事件
-    public func leftBarButtonItemClicked(item: UIBarButtonItem) {
+    open func leftBarButtonItemClicked(item: UIBarButtonItem) {
         _ = navigationController?.popToRootViewController(animated: true)
     }
-    public func rightBarButtonItemClicked(item: UIBarButtonItem) {
+    open func rightBarButtonItemClicked(item: UIBarButtonItem) {
         print("rightBarButtonItemClicked")
     }
 }
