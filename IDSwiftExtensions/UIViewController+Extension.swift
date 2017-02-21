@@ -8,25 +8,25 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     /** Configure the navigation bar with only title */
-    func configureNavigationBar(title: String) {
+    public func configureNavigationBar(title: String) {
         configureNavigationBar(title: title, leftImage: nil, rightAttributedString: nil)
     }
     /** Configure the navigation bar with title and leftImage */
-    func configureNavigationBar(title: String, leftImage: UIImage) {
+    public func configureNavigationBar(title: String, leftImage: UIImage) {
         configureNavigationBar(title: title, leftImage: leftImage, rightAttributedString: nil)
     }
     /** Configure the navigation bar with title and rightImage */
-    func configureNavigationBar(title: String, rightImage: UIImage) {
+    public func configureNavigationBar(title: String, rightImage: UIImage) {
         configureNavigationBar(title: title, leftImage: nil, rightImage: rightImage)
     }
     /** Configure the navigation bar with title and rightAttributedString */
-    func configureNavigationBar(title: String, rightAttributedString: NSAttributedString) {
+    public func configureNavigationBar(title: String, rightAttributedString: NSAttributedString) {
         configureNavigationBar(title: title, leftImage: nil, rightAttributedString: rightAttributedString)
     }
     /** Configure the navigation bar with title, optional leftImage and optional rightAttributedString */
-    func configureNavigationBar(title: String, leftImage: UIImage?, rightAttributedString: NSAttributedString?) {
+    public func configureNavigationBar(title: String, leftImage: UIImage?, rightAttributedString: NSAttributedString?) {
         self.title = title
         if let leftImage = leftImage {
             navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftImage, style: .done, target: self, action: #selector(leftBarButtonItemClicked(item:)))
@@ -39,7 +39,7 @@ extension UIViewController {
         }
     }
     /** Configure the navigation bar with title, optional leftImage and optional rightAttributedString */
-    func configureNavigationBar(title: String, leftImage: UIImage?, rightImage: UIImage?) {
+    public func configureNavigationBar(title: String, leftImage: UIImage?, rightImage: UIImage?) {
         self.title = title
         if let leftImage = leftImage {
             navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftImage, style: .done, target: self, action: #selector(leftBarButtonItemClicked(item:)))
@@ -49,10 +49,10 @@ extension UIViewController {
         }
     }
     // MARK: - 控制事件
-    func leftBarButtonItemClicked(item: UIBarButtonItem) {
+    public func leftBarButtonItemClicked(item: UIBarButtonItem) {
         _ = navigationController?.popToRootViewController(animated: true)
     }
-    func rightBarButtonItemClicked(item: UIBarButtonItem) {
+    public func rightBarButtonItemClicked(item: UIBarButtonItem) {
         print("rightBarButtonItemClicked")
     }
 }

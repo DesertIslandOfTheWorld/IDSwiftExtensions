@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIButton {
+public extension UIButton {
     /** Initialize UIButton with an attributedText for normal state */
-    convenience init(attributedTitle: NSAttributedString) {
+    public convenience init(attributedTitle: NSAttributedString) {
         self.init()
         setAttributedTitle(attributedTitle, for: .normal)
     }
