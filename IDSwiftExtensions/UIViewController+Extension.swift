@@ -8,7 +8,7 @@
 
 import UIKit
 
-open extension UIViewController {
+public extension UIViewController {
     /** Configure the navigation bar with only title */
     public func configureNavigationBar(title: String) {
         configureNavigationBar(title: title, leftImage: nil, rightAttributedString: nil)
