@@ -9,9 +9,15 @@
 import UIKit
 
 public extension UIButton {
-    /** Initialize UIButton with an attributedText for normal state */
-    public convenience init(attributedTitle: NSAttributedString) {
+    /** Initialize UIButton with an attributedText */
+    public convenience init(attributedTitle: NSAttributedString, for state: UIControlState) {
         self.init()
-        setAttributedTitle(attributedTitle, for: .normal)
+        setAttributedTitle(attributedTitle, for: state)
+    }
+    /** Initialize UIButton with an title and titleColor */
+    public convenience init(title: String, titleColor: UIColor, for state: UIControlState) {
+        self.init()
+        setTitle(title, for: state)
+        setTitleColor(titleColor, for: state)
     }
 }
