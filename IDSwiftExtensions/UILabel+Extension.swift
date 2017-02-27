@@ -14,9 +14,9 @@ public extension UILabel {
     /// 创建一个带边框 和 圆角的 Label
     convenience init(font: UIFont, textColor: UIColor, borderWidth: CGFloat, cornerRadius: CGFloat) {
         self.init()
-        self.layer.borderColor = textColor
-        self.layer.borderWidth = width
-        self.layer.cornerRadius = radius
+        self.layer.borderColor = textColor.CGColor
+        self.layer.borderWidth = borderWidth
+        self.layer.cornerRadius = cornerRadius
         self.font = font
         self.textColor = textColor
     }
